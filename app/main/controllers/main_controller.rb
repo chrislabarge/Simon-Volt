@@ -8,6 +8,26 @@ class MainController < Volt::ModelController
     # Add code for when the about view is loaded
   end
 
+	def color_array
+		return ['green','blue','yellow','red']
+	end
+	
+	
+	def add_color#(game_array)
+		
+		page._colors.push('red')
+		
+	end
+	
+	
+	def red
+		if page._colors.first == ['red']
+			page._colors.pop
+		else
+			return 'nope'	
+		end
+	end
+
   private
 
   # The main template contains a #template binding that shows another
